@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>adonaischool</title>
+    <link rel="stylesheet" href="contact.css">
+    <link rel="stylesheet" href="styles.css">
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <!-- =================================== BOOSTRAP ICONS ======================== -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+<body>
+  <nav>
+    <div class="container navbar">
+      <div class="logo"><a href="index.html#home">Adonai School</a></div>
+        <div class="navlinks">
+            <ul>
+                <li><a href="index.html#home">Home</a></li>
+                <li><a href="index.html#aboutus">About Us</a></li>
+                <li><a href="index.html#course">Our Courses</a></li>
+                <li><a href="gallery.html">Our Gallery</a></li>
+                <li><a href="index.html#contactus">Contact Us</a></li>
+            </ul>
+        </div>
+        <div class="togle-btn">
+            <i class="bi bi-list"></i>
+        </div>
+    </div>
+</nav>
+
+<main class="page">
+    <section class="contact-container">
+        <article class="contact-info">
+          <h3>Have questions or want to connect with us?</h3>
+          <p>
+            We’re here to help! Whether it’s about classes, fun activities, or anything else, we’d love to hear from you. Reach out and let’s make learning exciting together!
+          </p>
+          
+        </article>
+        <article>
+          <form class="form contact-form">
+            <div class="form-row">
+              <label html="name" class="form-label">your name</label>
+              <input type="text" name="name" id="name" class="form-input" />
+            </div>
+            <div class="form-row">
+              <label html="email" class="form-label">your email</label>
+              <input type="text" name="email" id="email" class="form-input" />
+            </div>
+            <div class="form-row">
+              <label html="message" class="form-label">message</label>
+              <textarea name="message" id="message" class="form-textarea"></textarea>
+            </div>
+            <button type="submit" class="btn btn-block">
+              submit
+            </button>
+          </form>
+        </article>
+      </section>
+</main>
+    <section class="contactus container">
+        <div class="contacts">
+            <div class="phone"><i class="bi bi-telephone-fill"></i> +255 12 345 678</div>
+            <div class="email"><i class="bi bi-envelope-open-fill"></i> AdonaiSchool@gmail.com</div>
+        </div>
+        <div class="newsletter">
+            <div class="emails">
+                <input type="email" placeholder="Enter your email">
+                <button>SUBSCRIBE NOW</button>
+            </div>
+            <div class="socials">
+                <i class="bi bi-instagram"></i>
+                <i class="bi bi-twitter-x"></i>
+                <i class="bi bi-facebook"></i>
+            </div>
+        </div>
+        <div class="grid-3">
+            <div class="grid-box">
+                <h2>Get In Touch</h2>
+                <ul>
+                    <li>Arusha - Tanzania</li>
+                    <li><i class="bi bi-telephone-fill"></i> +255 12 345 678</li>
+                    <li><i class="bi bi-envelope-open-fill"></i> abckidsschool@gmail.com</li>
+                </ul>
+            </div>
+            <div class="grid-box">
+                <h2>Courses</h2>
+                <ul>
+                    <li>Science Discovery</li>
+                    <li>History</li>
+                    <li>Social Works</li>
+                    <li>Elimu Ya Dini</li>
+                    <li>Vocational Training</li>
+                </ul>
+            </div>
+            <div class="grid-box">
+                <h2>Resources</h2>
+                <ul>
+                  <li><a href="index.html#aboutus">About Us</a></li>
+                  <li><a href="gallery.html">Our Gallery</a></li>
+                  <li><a href="teachers.html">Our Teacher</a></li>
+                  <li><a href="index.html#course">Our Courses</a></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <!-- <script src="app.js"></script> -->
+    <script>
+
+// ====================== TOGGLE MENU ==========================//
+document.addEventListener("DOMContentLoaded", function () {
+    const toggleBtn = document.querySelector(".togle-btn");
+    const navLinks = document.querySelector(".navlinks");
+
+    // Toggle the menu on button click (only in mobile view)
+    toggleBtn.addEventListener("click", function () {
+        navLinks.classList.toggle("active");
+    });
+
+    // Close menu when clicking a nav link
+    document.querySelectorAll(".navlinks ul li a").forEach(link => {
+        link.addEventListener("click", () => {
+            navLinks.classList.remove("active");
+        });
+    });
+
+    // Close menu when clicking outside (only in mobile view)
+    document.addEventListener("click", function (event) {
+        if (window.innerWidth <= 600 && !navLinks.contains(event.target) && !toggleBtn.contains(event.target)) {
+            navLinks.classList.remove("active");
+        }
+    });
+
+    // Ensure navlinks are always visible on larger screens
+    window.addEventListener("resize", function () {
+        if (window.innerWidth > 600) {
+            navLinks.classList.remove("active");
+            navLinks.style.display = "flex";
+        } else {
+            navLinks.style.display = "none";
+        }
+    });
+});
+
+    </script>
+</body>
+</html>

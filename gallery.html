@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>adonaischool</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <!-- =================================== BOOSTRAP ICONS ======================== -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+<body>
+  <nav>
+    <div class="container navbar">
+      <div class="logo"><a href="index.html#home">Adonai School</a></div>
+        <div class="navlinks">
+            <ul>
+                <li><a href="index.html#home">Home</a></li>
+                <li><a href="index.html#aboutus">About Us</a></li>
+                <li><a href="index.html#course">Our Courses</a></li>
+                <li><a href="gallery.html">Our Gallery</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </div>
+        <div class="togle-btn">
+            <i class="bi bi-list"></i>
+        </div>
+    </div>
+</nav>
+
+    <section class="gallery">
+        <div class="container">
+            <h3>GALLERY</h3>
+            <h1>Our Story in Pictures</h1>
+
+            <!-- Full-width images with number text -->
+            <div class="mySlides">
+              <div class="numbertext">1 / 6</div>
+                <img src="assets/mages/graduationceremony.jpg" style="width:100%">
+            </div>
+          
+            <div class="mySlides">
+              <div class="numbertext">2 / 6</div>
+                <img src="assets/mages/kidsplayingsoccer.jpg" style="width:100%">
+            </div>
+          
+            <div class="mySlides">
+              <div class="numbertext">3 / 6</div>
+                <img src="assets/mages/festive.jpg" style="width:100%">
+            </div>
+          
+            <div class="mySlides">
+              <div class="numbertext">4 / 6</div>
+                <img src="assets/mages/extracurriculum.webp" style="width:100%">
+            </div>
+          
+            <div class="mySlides">
+              <div class="numbertext">5 / 6</div>
+                <img src="assets/mages/dailyroutine.jpg" style="width:100%">
+            </div>
+          
+            <div class="mySlides">
+              <div class="numbertext">6 / 6</div>
+                <img src="assets/mages/extracurriculum.webp" style="width:100%">
+            </div>
+          
+            <!-- Next and previous buttons -->
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+          
+            <!-- Image text -->
+            <div class="caption-container">
+              <p id="caption"></p>
+            </div>
+          
+            <!-- Thumbnail images -->
+            <div class="row">
+              <div class="column">
+                <img class="demo cursor" src="assets/mages/graduationceremony.jpg" style="width:100%" onclick="currentSlide(1)" alt="Where brilliance meets recognition celebrating the milestones of our scholars">
+              </div>
+              <div class="column">
+                <img class="demo cursor" src="assets/mages/kidsplayingsoccer.jpg" style="width:100%" onclick="currentSlide(2)" alt="Beyond the books; where passion, teamwork, and talent shine.">
+              </div>
+              <div class="column">
+                <img class="demo cursor" src="assets/mages/festive.jpg" style="width:100%" onclick="currentSlide(3)" alt="Moment that units us - festivals, traditions, and unforgettable memories">
+              </div>
+              <div class="column">
+                <img class="demo cursor" src="assets/mages/extracurriculum.webp" style="width:100%" onclick="currentSlide(4)" alt="Adventures beyond the classroom; learning, exploring and growing together.">
+              </div>
+              <div class="column">
+                <img class="demo cursor" src="assets/mages/dailyroutine.jpg" style="width:100%" onclick="currentSlide(5)" alt="A day in the life; the heartbeat of Adonai School.">
+              </div>
+              <div class="column">
+                <img class="demo cursor" src="assets/mages/extracurriculum.webp" style="width:100%" onclick="currentSlide(6)" alt="Building briges; connecting past, present and future.">
+              </div>
+            </div>
+          </div>
+    </section>
+    <section class="contactus container">
+        <div class="contacts">
+            <div class="phone"><i class="bi bi-telephone-fill"></i> +255 12 345 678</div>
+            <div class="email"><i class="bi bi-envelope-open-fill"></i> AdonaiSchool@gmail.com</div>
+        </div>
+        <div class="newsletter">
+            <div class="emails">
+                <input type="email" placeholder="Enter your email">
+                <button>SUBSCRIBE NOW</button>
+            </div>
+            <div class="socials">
+                <i class="bi bi-instagram"></i>
+                <i class="bi bi-twitter-x"></i>
+                <i class="bi bi-facebook"></i>
+            </div>
+        </div>
+        <div class="grid-3">
+            <div class="grid-box">
+                <h2>Get In Touch</h2>
+                <ul>
+                    <li>Arusha - Tanzania</li>
+                    <li><i class="bi bi-telephone-fill"></i> +255 12 345 678</li>
+                    <li><i class="bi bi-envelope-open-fill"></i> abckidsschool@gmail.com</li>
+                </ul>
+            </div>
+            <div class="grid-box">
+                <h2>Courses</h2>
+                <ul>
+                    <li>Science Discovery</li>
+                    <li>History</li>
+                    <li>Social Works</li>
+                    <li>Elimu Ya Dini</li>
+                    <li>Vocational Training</li>
+                </ul>
+            </div>
+            <div class="grid-box">
+                <h2>Resources</h2>
+                <ul>
+                  <li><a href="index.html#aboutus">About Us</a></li>
+                  <li><a href="gallery.html">Our Gallery</a></li>
+                  <li><a href="teachers.html">Our Teacher</a></li>
+                  <li><a href="index.html#course">Our Courses</a></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <script src="app.js"></script>
+    <script>
+        // ========================== GALLERY SECTIONS JS ========================== //
+var slideIndex = 1;
+showSlides(slideIndex);
+
+// Next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  var captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+}
+
+// ====================== TOGGLE MENU ==========================//
+document.addEventListener("DOMContentLoaded", function () {
+    const toggleBtn = document.querySelector(".togle-btn");
+    const navLinks = document.querySelector(".navlinks");
+
+    // Toggle the menu on button click (only in mobile view)
+    toggleBtn.addEventListener("click", function () {
+        navLinks.classList.toggle("active");
+    });
+
+    // Close menu when clicking a nav link
+    document.querySelectorAll(".navlinks ul li a").forEach(link => {
+        link.addEventListener("click", () => {
+            navLinks.classList.remove("active");
+        });
+    });
+
+    // Close menu when clicking outside (only in mobile view)
+    document.addEventListener("click", function (event) {
+        if (window.innerWidth <= 600 && !navLinks.contains(event.target) && !toggleBtn.contains(event.target)) {
+            navLinks.classList.remove("active");
+        }
+    });
+
+    // Ensure navlinks are always visible on larger screens
+    window.addEventListener("resize", function () {
+        if (window.innerWidth > 600) {
+            navLinks.classList.remove("active");
+            navLinks.style.display = "flex";
+        } else {
+            navLinks.style.display = "none";
+        }
+    });
+});
+
+    </script>
+</body>
+</html>

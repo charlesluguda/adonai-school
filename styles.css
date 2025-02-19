@@ -1,0 +1,742 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", serif;
+}
+html {
+    scroll-behavior: smooth;
+}
+::-webkit-scrollbar {
+    width: .60rem;
+    border-radius: .5rem;
+  }
+:root{
+    --primary-color: #362120;
+    --color-white: #ffffff;
+    --bg: #fdfdfd;
+    --highlight1: #ED4264;
+    --highlight2: #FFEDBC;
+    --color: #1a1e24;
+    --font-number: Montserrat, Roboto, Helvetica, Arial, sans-serif;
+    --font-head: "Space Mono", Consolas, Menlo, Monaco, "Courier New", monospace;
+    --font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+a{
+    text-decoration: none;
+    color: var(--color-white);
+}
+.container h3{
+    color: var(--primary-color);
+}
+nav{
+    width: 100%;
+    height: 60px;
+    background-color: var(--primary-color);
+    color: var(--color-white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.container{
+    width: 80%;
+    margin: auto;
+}
+.logo{
+    font-weight: 700;
+}
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.navlinks ul{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+.fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); 
+}
+
+.navlinks ul li{
+    list-style: none;
+}
+.togle-btn i{
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.home{
+    height: 500px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    justify-content: center;
+    padding: 10px 10px;
+}
+.home-content h1{
+    padding-top: 10px;
+    font-size: 55px;
+}
+.home-content h3{
+    color: var(--primary-color);
+}
+.home-content p{
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+button{
+    padding: 8px 12px;
+    border-radius: 20px;
+    border: 1px solid transparent;
+    background: var(--primary-color);
+    color: var(--color-white);
+    text-transform: uppercase;
+    cursor: pointer;
+}
+.home-background img{
+    width: 100%;
+    margin: auto;
+}
+
+.features{
+    width: 100%;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+.features img{
+    width: 80%;
+    margin: auto;
+    height: auto;
+    border-radius: 20px;
+    border: 1px solid var(--primary-color);
+}
+.features .container{
+    width: 80%;
+    margin: 200px;
+}
+.feature{
+    display: grid;
+    grid-template-columns: 1fr;
+    object-fit: contain;
+}
+.feature-container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    width: 90%;
+    margin: auto;
+    text-align: center;
+    justify-content: start;
+}
+
+.aboutus{
+    display: grid;
+    height: auto;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    padding-top: 120px;
+}
+.aboutus-background img{
+    width: 90%;
+    margin: auto;
+}
+.aboutus-content h2, h3, p{
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.list {
+    list-style: none;
+}
+
+.item {
+    display: block;
+    clear: both;
+    counter-increment: list;
+    padding-bottom: 1rem;
+    font-size: 1.1rem;
+    line-height: 1.375;
+    position: relative;
+}
+
+.item:before {
+    font: bold 1.0rem/1 var(--font-number);
+    content: counter(list);
+    width: 3rem;
+    height: 3rem;
+    float: left;
+    margin: 0 1.5rem 0.75rem 0;
+    color: var(--bg);
+    background: var(--primary-color) linear-gradient(to bottom right, var(--primary-color) 25%, var(--highlight2));
+    text-shadow: 0 0 2px var(--primary-color);
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    shape-outside: ellipse();
+    z-index: 1;
+}
+
+.item:after {
+    width: 1.5rem;
+    height: 1.5rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: "";
+    background: var(--primary-color);
+    z-index: -1;
+    border-top-left-radius: 3px;
+}
+
+.mission{
+    height: 400px;
+    align-items: center;
+    gap: 10px;
+}
+
+.student_teacher{
+    width: 100%;
+    height: 600px;
+    background-image: url(assets/mages/teachers.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+.student_teacher h2{
+    position: absolute;
+    bottom: 10%;
+    left: 5%;
+    font-size: 40px;
+    background: var(--primary-color);
+    color: var(--color-white);
+    padding: 5px;
+}
+.testimonials{
+    text-align: center;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.testimony{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    gap: 15px;
+}
+.person-image img{
+    width: 100%;
+}
+.person-testimony{
+    text-align: left;
+}
+.testimony-wrapper {
+    display: flex;
+    overflow: hidden;
+    width: 100%; 
+}
+
+.testimony {
+    flex: 0 0 100%;
+    transition: transform 0.5s ease-in-out; 
+}
+
+.dots {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    gap: 10px;
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: gray;
+    cursor: pointer;
+}
+
+.dot.active {
+    background-color: black;
+}
+
+/* ============================= TEACHER SECTION =============================== */
+.teacher {
+    width: 100%;
+    text-align: center;
+    margin: auto;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.teacher h2 {
+    font-size: 2rem;
+    font-family: 'Montserrat', sans-serif;
+    margin: 20px 0;
+    text-align: center;
+    width: 100%;
+}
+.grid-2{
+    width: 80%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    text-align: left;
+}
+.teacher .grid-2 .grid-boxs{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+.teacher-image{
+    display: grid;
+    align-items: flex-start;
+    justify-content: flex-end;
+}
+.teacher-image img{
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 80%;
+    border: 4px solid var(--primary-color);
+}
+.teacher-info h3{
+    padding-bottom: 2px;
+    border-bottom: 3px solid var(--primary-color);
+}
+.teacher-info p{
+    padding-bottom: 3px;
+}
+
+.teachers{
+    width: 100%;
+    height: 600px;
+    background-image: url(assets/mages/teachers.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+.teachers .content{
+    position: absolute;
+    bottom: 10%;
+    left: 5%;
+}
+.teachers .content h1{
+    padding-bottom: 10px;
+    background: var(--primary-color);
+    color: var(--color-white);
+    padding: 5px;
+    margin-bottom: 5px;
+}
+
+/* =================================== CONTACT PAGE =================================== */
+.contact-form {
+    width: 100%;
+    margin: 0;
+  }
+  .contact-container {
+    display: grid;
+    gap: 2rem 3rem;
+    padding-bottom: 3rem;
+  }
+  @media screen and (min-width: 992px) {
+    .contact-container {
+      grid-template-columns: 1fr 450px;
+      align-items: center;
+    }
+  }
+  
+.contactus{
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: var(--primary-color);
+    color: var(--color-white);
+    width: 100%;
+    position: relative;
+    padding: 10px 0px;
+}
+.contacts{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 100%;
+}
+.phone{
+    height: 100%;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.email{
+    height: 100%;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.phone i , .email i{
+    padding-right: 10px;
+    font-size: 18px;
+}
+.newsletter{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 80%;
+    margin: auto;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+}
+.newsletter button{
+    background: var(--color-white);
+    color: var(--primary-color);
+}
+.emails input{
+    padding: 10px 20px;
+    border: 1px solid transparent;
+    margin-right: 10px;
+}
+.socials{
+    text-align: right;
+}
+.socials i{
+    font-size: 22px;
+    margin: 10px;
+    padding: 10px 0px;
+}
+.grid-divider {
+    width: 80%;
+    height: 1px;
+    background-color: var(--color-white);
+    margin: 20px auto;
+}
+.course .grid-3, .mission .grid-3{
+    width: 100%;
+    margin: auto;
+}
+.grid-3{
+    width: 80%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    text-align: left;
+}
+.grid-box h2{
+    padding-bottom: 10px;
+}
+.grid-box ul li{
+    list-style: none;
+    padding-bottom: 7px;
+}
+.grid-box a{
+    color: white;
+}
+
+.course{
+    text-align: center;
+    height: 600px;
+    align-items: center;
+    justify-content: center;
+    padding-top: 70px;
+    padding-bottom: 30px;
+}
+.mission{
+    text-align: center;
+    height: auto;
+    align-items: center;
+    justify-content: center;
+    padding-top: 70px;
+    padding-bottom: 70px;
+}
+.course h3, .mission h3{
+    margin-top: 20px;
+}
+.course .grid-box, .mission .grid-box{
+    padding: 10px 10px;
+}
+.grid-box img{
+    width: 100%;
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+.grid-border{
+    border: 1px dashed var(--primary-color);
+}
+
+/* ============================= MEDIA QUERIES =============================*/
+@media only screen and (min-width: 601px){
+    .togle-btn{
+        display: none;
+    }
+    .teacher-card:nth-child(2){
+        margin-top: -60px;
+    }
+}
+@media only screen and (max-width: 600px) {
+    .navlinks {
+        display: none;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background: var(--primary-color);
+        width: 100%;
+        text-align: center;
+        padding: 15px 0;
+        z-index: 99;
+    }
+
+    .navlinks.active {
+        display: block; 
+    }
+
+    .navlinks ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+@media only screen and (max-width: 600px){
+    .navlinks{
+        display: none;
+    }
+    .home{
+        display: grid;
+        grid-template-columns: 1fr;
+        height: auto;
+        width: 90%;
+        margin: auto;
+    }
+    .home-background img{
+        width: 90%;
+        margin: auto;
+    }
+    .home-content h1{
+        font-size: 40px;
+    }
+    .features{
+        height: auto;
+    }
+    .feature-container{
+        display: grid;
+        grid-template-columns: 1fr;
+        height: auto;
+    }
+    .aboutus{
+        display: grid;
+        grid-template-columns: 1fr;
+        height: auto;
+    }
+    .mission{
+        display: grid;
+        grid-template-columns: 1fr;
+        height: auto;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+    .student_teacher h2{
+        font-size: 30px;
+    }
+    .testimonials{
+        height: 600px;
+    }
+    .testimony{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    .headline{
+        font-size: 20px;
+    }
+    .contactus{
+        height: auto;
+    }
+    .contacts{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    .newsletter{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    .emails{
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        align-items: start;
+    }
+    .emails input{
+        width: 100%;
+    }
+    .socials{
+        text-align: left;
+    }
+    .grid-3{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    .grid-2{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    .course{
+        height: auto;
+    }
+    .teacher{
+        height: auto;
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    .teacher .container{
+        width: 80%;
+        margin: auto;
+    }
+    .teacher-image img{
+        width: 80px;
+        height: 80px;
+    }
+}
+@media only screen and (max-width: 800px){
+    .mission{
+        display: grid;
+        grid-template-columns: 1fr;
+        height: auto;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+}
+
+
+/* ====================== GALLERY SECTIONS ============================== */
+.gallery .container {
+    position: relative;
+    height: 500px;
+    padding-top: 20px;
+    align-items: center;
+    text-align: center;
+  }
+  .gallery .container h1{
+    padding-bottom: 10px;
+  }
+  
+  /* Hide the images by default */
+  .mySlides {
+    display: none;
+  }
+  .mySlides img{
+    width: 100%;
+    object-fit: cover;
+  }
+  .column img{
+    width: 100%;
+    height: 100px;
+    object-fit: cover;
+  }
+  
+  .cursor {
+    cursor: pointer;
+  }
+  
+  .prev,
+  .next {
+    cursor: pointer;
+    position: absolute;
+    top: 70%;
+    width: auto;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    -webkit-user-select: none;
+  }
+  
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  .prev{
+    left: 0;
+  }
+  
+  .prev:hover,
+  .next:hover {
+    background-color: var(--primary-color);
+  }
+  
+  .numbertext {
+    color: black;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 110px;
+  }
+  
+  .caption-container {
+    text-align: center;
+    background-color: var(--primary-color);
+    padding: 2px 16px;
+    color: white;
+  }
+  
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  .column {
+    float: left;
+    width: 16.66%;
+  }
+  
+  .demo {
+    opacity: 0.6;
+  }
+  
+  .active,
+  .demo:hover {
+    opacity: 1;
+  }
+  @media only screen and (max-width: 600px){
+    .prev,
+    .next {
+      cursor: pointer;
+      position: absolute;
+      top: 40%;
+      width: auto;
+      padding: 16px;
+      color: white;
+      font-weight: bold;
+      font-size: 20px;
+      border-radius: 0 3px 3px 0;
+      user-select: none;
+      -webkit-user-select: none;
+    }
+    .column img{
+        width: 100%;
+        height: 50px;
+        object-fit: cover;
+      }
+  }
