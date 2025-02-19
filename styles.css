@@ -595,8 +595,11 @@ button{
         display: none;
     }
     .grid-3{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    .contactus .grid-3{
         display: none;
-        /* grid-template-columns: 1fr; */
     }
     .grid-2{
         display: grid;
