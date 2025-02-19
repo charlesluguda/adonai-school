@@ -591,9 +591,12 @@ button{
     .socials{
         text-align: left;
     }
+    .grid-divider{
+        display: none;
+    }
     .grid-3{
-        display: grid;
-        grid-template-columns: 1fr;
+        display: none;
+        /* grid-template-columns: 1fr; */
     }
     .grid-2{
         display: grid;
